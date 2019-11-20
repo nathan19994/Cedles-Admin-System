@@ -1,0 +1,16 @@
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\bin\Debug\Cedles Admin System.exe.config
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\bin\Debug\Cedles Admin System.exe
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\bin\Debug\Cedles Admin System.pdb
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\bin\Debug\Cedles Admin System.xml
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles Admin System.vbprojAssemblyReference.cache
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles_Admin_System.FrmAccounts.resources
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles_Admin_System.FrmHome.resources
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles_Admin_System.FrmSections.resources
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles_Admin_System.FrmStudents.resources
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles_Admin_System.FrmTeachers.resources
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles_Admin_System.Resources.resources
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles Admin System.vbproj.GenerateResource.cache
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles Admin System.vbproj.CoreCompileInputs.cache
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles Admin System.exe
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles Admin System.xml
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles Admin System.pdb
