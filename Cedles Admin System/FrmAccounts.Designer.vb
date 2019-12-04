@@ -45,6 +45,7 @@ Partial Class FrmAccounts
         Me.ColumnHeader15 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader14 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.txtconfirmpassword = New System.Windows.Forms.TextBox()
         Me.txtpassword = New System.Windows.Forms.TextBox()
         Me.txtusername = New System.Windows.Forms.TextBox()
@@ -70,6 +71,8 @@ Partial Class FrmAccounts
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmbusertypes = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnSections = New System.Windows.Forms.Button()
         CType(Me.btncancel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btndeleteaccount, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnsaveaccount, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,7 +89,7 @@ Partial Class FrmAccounts
         Me.Header1.ForeColor = System.Drawing.Color.White
         Me.Header1.Location = New System.Drawing.Point(0, 0)
         Me.Header1.Name = "Header1"
-        Me.Header1.Size = New System.Drawing.Size(944, 29)
+        Me.Header1.Size = New System.Drawing.Size(1102, 29)
         Me.Header1.TabIndex = 395
         Me.Header1.Text = "CEDLES "
         Me.Header1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -98,7 +101,7 @@ Partial Class FrmAccounts
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(944, 0)
+        Me.Button3.Location = New System.Drawing.Point(1102, 0)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(82, 29)
         Me.Button3.TabIndex = 394
@@ -113,11 +116,11 @@ Partial Class FrmAccounts
         Me.BtnTeachers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTeachers.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnTeachers.ForeColor = System.Drawing.Color.Gray
-        Me.BtnTeachers.Location = New System.Drawing.Point(408, 29)
+        Me.BtnTeachers.Location = New System.Drawing.Point(507, 29)
         Me.BtnTeachers.Name = "BtnTeachers"
-        Me.BtnTeachers.Size = New System.Drawing.Size(210, 56)
+        Me.BtnTeachers.Size = New System.Drawing.Size(170, 56)
         Me.BtnTeachers.TabIndex = 401
-        Me.BtnTeachers.Text = "TEACHERS"
+        Me.BtnTeachers.Text = "SECTION ASSIGNMENT"
         Me.BtnTeachers.UseVisualStyleBackColor = False
         '
         'BtnStudents
@@ -128,9 +131,9 @@ Partial Class FrmAccounts
         Me.BtnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnStudents.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnStudents.ForeColor = System.Drawing.Color.Gray
-        Me.BtnStudents.Location = New System.Drawing.Point(199, 29)
+        Me.BtnStudents.Location = New System.Drawing.Point(169, 29)
         Me.BtnStudents.Name = "BtnStudents"
-        Me.BtnStudents.Size = New System.Drawing.Size(210, 56)
+        Me.BtnStudents.Size = New System.Drawing.Size(170, 56)
         Me.BtnStudents.TabIndex = 400
         Me.BtnStudents.Text = "STUDENTS"
         Me.BtnStudents.UseVisualStyleBackColor = False
@@ -145,7 +148,7 @@ Partial Class FrmAccounts
         Me.btnHome.ForeColor = System.Drawing.Color.Gray
         Me.btnHome.Location = New System.Drawing.Point(0, 29)
         Me.btnHome.Name = "btnHome"
-        Me.btnHome.Size = New System.Drawing.Size(200, 56)
+        Me.btnHome.Size = New System.Drawing.Size(170, 56)
         Me.btnHome.TabIndex = 399
         Me.btnHome.Text = "HOME"
         Me.btnHome.UseVisualStyleBackColor = False
@@ -158,9 +161,9 @@ Partial Class FrmAccounts
         Me.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOut.ForeColor = System.Drawing.Color.Gray
-        Me.btnOut.Location = New System.Drawing.Point(826, 29)
+        Me.btnOut.Location = New System.Drawing.Point(1014, 29)
         Me.btnOut.Name = "btnOut"
-        Me.btnOut.Size = New System.Drawing.Size(200, 56)
+        Me.btnOut.Size = New System.Drawing.Size(170, 56)
         Me.btnOut.TabIndex = 398
         Me.btnOut.Text = "LOGOUT"
         Me.btnOut.UseVisualStyleBackColor = False
@@ -173,9 +176,9 @@ Partial Class FrmAccounts
         Me.BtnAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAccounts.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAccounts.ForeColor = System.Drawing.Color.Gray
-        Me.BtnAccounts.Location = New System.Drawing.Point(617, 29)
+        Me.BtnAccounts.Location = New System.Drawing.Point(845, 29)
         Me.BtnAccounts.Name = "BtnAccounts"
-        Me.BtnAccounts.Size = New System.Drawing.Size(210, 56)
+        Me.BtnAccounts.Size = New System.Drawing.Size(170, 56)
         Me.BtnAccounts.TabIndex = 397
         Me.BtnAccounts.Text = "ACCOUNTS"
         Me.BtnAccounts.UseVisualStyleBackColor = False
@@ -184,11 +187,11 @@ Partial Class FrmAccounts
         '
         Me.lblTime.AutoSize = True
         Me.lblTime.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.lblTime.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTime.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lblTime.ForeColor = System.Drawing.Color.White
-        Me.lblTime.Location = New System.Drawing.Point(68, 614)
+        Me.lblTime.Location = New System.Drawing.Point(59, 626)
         Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(60, 30)
+        Me.lblTime.Size = New System.Drawing.Size(44, 21)
         Me.lblTime.TabIndex = 406
         Me.lblTime.Text = "TIME"
         '
@@ -196,11 +199,11 @@ Partial Class FrmAccounts
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(4, 584)
+        Me.Label1.Location = New System.Drawing.Point(5, 596)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(69, 30)
+        Me.Label1.Size = New System.Drawing.Size(52, 21)
         Me.Label1.TabIndex = 403
         Me.Label1.Text = "DATE:"
         '
@@ -208,11 +211,11 @@ Partial Class FrmAccounts
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(7, 614)
+        Me.Label2.Location = New System.Drawing.Point(8, 626)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 30)
+        Me.Label2.Size = New System.Drawing.Size(51, 21)
         Me.Label2.TabIndex = 404
         Me.Label2.Text = "TIME:"
         '
@@ -220,11 +223,11 @@ Partial Class FrmAccounts
         '
         Me.lblDate.AutoSize = True
         Me.lblDate.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lblDate.ForeColor = System.Drawing.Color.White
-        Me.lblDate.Location = New System.Drawing.Point(67, 584)
+        Me.lblDate.Location = New System.Drawing.Point(58, 596)
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(61, 30)
+        Me.lblDate.Size = New System.Drawing.Size(46, 21)
         Me.lblDate.TabIndex = 405
         Me.lblDate.Text = "DATE"
         '
@@ -237,7 +240,7 @@ Partial Class FrmAccounts
         Me.txtaccountfilter.Name = "txtaccountfilter"
         Me.txtaccountfilter.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.txtaccountfilter.ResetOnSpace = False
-        Me.txtaccountfilter.Size = New System.Drawing.Size(164, 29)
+        Me.txtaccountfilter.Size = New System.Drawing.Size(131, 29)
         Me.txtaccountfilter.TabIndex = 409
         Me.txtaccountfilter.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         '
@@ -250,7 +253,7 @@ Partial Class FrmAccounts
         Me.AccountFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AccountFilter.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AccountFilter.ForeColor = System.Drawing.Color.White
-        Me.AccountFilter.Location = New System.Drawing.Point(176, 108)
+        Me.AccountFilter.Location = New System.Drawing.Point(143, 108)
         Me.AccountFilter.Name = "AccountFilter"
         Me.AccountFilter.Size = New System.Drawing.Size(24, 28)
         Me.AccountFilter.TabIndex = 407
@@ -272,16 +275,16 @@ Partial Class FrmAccounts
         'accountdisplay
         '
         Me.accountdisplay.BackColor = System.Drawing.Color.Gray
-        Me.accountdisplay.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader18, Me.ColumnHeader19, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader15, Me.ColumnHeader3, Me.ColumnHeader14})
+        Me.accountdisplay.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader18, Me.ColumnHeader19, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader15, Me.ColumnHeader3, Me.ColumnHeader14, Me.ColumnHeader4})
         Me.accountdisplay.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.accountdisplay.ForeColor = System.Drawing.Color.Black
         Me.accountdisplay.FullRowSelect = True
         Me.accountdisplay.GridLines = True
         Me.accountdisplay.HideSelection = False
         Me.accountdisplay.LabelEdit = True
-        Me.accountdisplay.Location = New System.Drawing.Point(207, 288)
+        Me.accountdisplay.Location = New System.Drawing.Point(169, 307)
         Me.accountdisplay.Name = "accountdisplay"
-        Me.accountdisplay.Size = New System.Drawing.Size(819, 344)
+        Me.accountdisplay.Size = New System.Drawing.Size(1015, 344)
         Me.accountdisplay.TabIndex = 415
         Me.accountdisplay.UseCompatibleStateImageBehavior = False
         Me.accountdisplay.View = System.Windows.Forms.View.Details
@@ -323,6 +326,11 @@ Partial Class FrmAccounts
         '
         Me.ColumnHeader14.Text = "Last Name"
         Me.ColumnHeader14.Width = 101
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "User Type"
+        Me.ColumnHeader4.Width = 100
         '
         'txtconfirmpassword
         '
@@ -461,9 +469,9 @@ Partial Class FrmAccounts
         '
         Me.btncancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btncancel.Image = Global.Cedles_Admin_System.My.Resources.Resources.cancel
-        Me.btncancel.Location = New System.Drawing.Point(2, 353)
+        Me.btncancel.Location = New System.Drawing.Point(0, 351)
         Me.btncancel.Name = "btncancel"
-        Me.btncancel.Size = New System.Drawing.Size(198, 53)
+        Me.btncancel.Size = New System.Drawing.Size(170, 53)
         Me.btncancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btncancel.TabIndex = 414
         Me.btncancel.TabStop = False
@@ -472,9 +480,9 @@ Partial Class FrmAccounts
         '
         Me.btndeleteaccount.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btndeleteaccount.Image = Global.Cedles_Admin_System.My.Resources.Resources.deleteaccount
-        Me.btndeleteaccount.Location = New System.Drawing.Point(2, 301)
+        Me.btndeleteaccount.Location = New System.Drawing.Point(0, 301)
         Me.btndeleteaccount.Name = "btndeleteaccount"
-        Me.btndeleteaccount.Size = New System.Drawing.Size(198, 53)
+        Me.btndeleteaccount.Size = New System.Drawing.Size(170, 53)
         Me.btndeleteaccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btndeleteaccount.TabIndex = 413
         Me.btndeleteaccount.TabStop = False
@@ -483,9 +491,9 @@ Partial Class FrmAccounts
         '
         Me.btnsaveaccount.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnsaveaccount.Image = Global.Cedles_Admin_System.My.Resources.Resources.saveaccount
-        Me.btnsaveaccount.Location = New System.Drawing.Point(2, 249)
+        Me.btnsaveaccount.Location = New System.Drawing.Point(0, 249)
         Me.btnsaveaccount.Name = "btnsaveaccount"
-        Me.btnsaveaccount.Size = New System.Drawing.Size(198, 53)
+        Me.btnsaveaccount.Size = New System.Drawing.Size(170, 53)
         Me.btnsaveaccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnsaveaccount.TabIndex = 412
         Me.btnsaveaccount.TabStop = False
@@ -494,9 +502,9 @@ Partial Class FrmAccounts
         '
         Me.btneditaccount.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btneditaccount.Image = Global.Cedles_Admin_System.My.Resources.Resources.editaccount
-        Me.btneditaccount.Location = New System.Drawing.Point(2, 197)
+        Me.btneditaccount.Location = New System.Drawing.Point(0, 197)
         Me.btneditaccount.Name = "btneditaccount"
-        Me.btneditaccount.Size = New System.Drawing.Size(199, 53)
+        Me.btneditaccount.Size = New System.Drawing.Size(170, 53)
         Me.btneditaccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btneditaccount.TabIndex = 411
         Me.btneditaccount.TabStop = False
@@ -505,9 +513,9 @@ Partial Class FrmAccounts
         '
         Me.btnaddaccount.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnaddaccount.Image = Global.Cedles_Admin_System.My.Resources.Resources.addaccount
-        Me.btnaddaccount.Location = New System.Drawing.Point(2, 145)
+        Me.btnaddaccount.Location = New System.Drawing.Point(0, 145)
         Me.btnaddaccount.Name = "btnaddaccount"
-        Me.btnaddaccount.Size = New System.Drawing.Size(198, 55)
+        Me.btnaddaccount.Size = New System.Drawing.Size(170, 55)
         Me.btnaddaccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnaddaccount.TabIndex = 410
         Me.btnaddaccount.TabStop = False
@@ -515,9 +523,9 @@ Partial Class FrmAccounts
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(32, Byte), Integer))
-        Me.PictureBox1.Location = New System.Drawing.Point(1, 83)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 83)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(200, 573)
+        Me.PictureBox1.Size = New System.Drawing.Size(170, 573)
         Me.PictureBox1.TabIndex = 402
         Me.PictureBox1.TabStop = False
         '
@@ -571,12 +579,44 @@ Partial Class FrmAccounts
         Me.cmbusertypes.Size = New System.Drawing.Size(161, 28)
         Me.cmbusertypes.TabIndex = 436
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Gray
+        Me.Button1.Location = New System.Drawing.Point(676, 29)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(170, 56)
+        Me.Button1.TabIndex = 437
+        Me.Button1.Text = "SUBJECT ASSIGNMENT"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'BtnSections
+        '
+        Me.BtnSections.BackColor = System.Drawing.Color.White
+        Me.BtnSections.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnSections.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.BtnSections.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSections.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSections.ForeColor = System.Drawing.Color.Gray
+        Me.BtnSections.Location = New System.Drawing.Point(338, 29)
+        Me.BtnSections.Name = "BtnSections"
+        Me.BtnSections.Size = New System.Drawing.Size(170, 56)
+        Me.BtnSections.TabIndex = 447
+        Me.BtnSections.Text = "SECTIONS"
+        Me.BtnSections.UseVisualStyleBackColor = False
+        '
         'FrmAccounts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1026, 650)
+        Me.ClientSize = New System.Drawing.Size(1184, 650)
+        Me.Controls.Add(Me.BtnSections)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cmbusertypes)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtmname)
@@ -677,4 +717,7 @@ Partial Class FrmAccounts
     Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents cmbusertypes As ComboBox
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnSections As Button
 End Class

@@ -15,6 +15,7 @@
             FrmAccounts.accountdisplay.Items(x).SubItems.Add(dr.GetValue(4).ToString())
             FrmAccounts.accountdisplay.Items(x).SubItems.Add(dr.GetValue(5).ToString())
             FrmAccounts.accountdisplay.Items(x).SubItems.Add(dr.GetValue(6).ToString())
+            FrmAccounts.accountdisplay.Items(x).SubItems.Add(dr.GetValue(7).ToString())
             x = x + 1
         End While
         con.Close()
@@ -33,7 +34,7 @@
         FrmAccounts.txtgname.Text = FrmAccounts.accountdisplay.Items(a).SubItems.Item(4).Text
         FrmAccounts.txtmname.Text = FrmAccounts.accountdisplay.Items(a).SubItems.Item(5).Text
         FrmAccounts.txtsname.Text = FrmAccounts.accountdisplay.Items(a).SubItems.Item(6).Text
-
+        FrmAccounts.cmbusertypes.Text = FrmAccounts.accountdisplay.Items(a).SubItems.Item(7).Text
     End Sub
     Public Sub accountinfoclear()
         FrmAccounts.txtaccountfilter.Clear()
@@ -56,6 +57,7 @@
         FrmAccounts.txtusername.Enabled = False
         FrmAccounts.txtpassword.Enabled = False
         FrmAccounts.txtconfirmpassword.Enabled = False
+        FrmAccounts.cmbusertypes.Enabled = False
     End Sub
     Public Sub initializeaccountbuttons()
         FrmAccounts.btnaddaccount.Enabled = True
@@ -81,13 +83,14 @@
         FrmAccounts.txtusername.Enabled = True
         FrmAccounts.txtpassword.Enabled = True
         FrmAccounts.txtconfirmpassword.Enabled = True
+        FrmAccounts.cmbusertypes.Enabled = True
     End Sub
     Public Sub AccountSave()
         If Not FrmAccounts.txtsname.Text = " " Or Not FrmAccounts.txtgname.Text = " " Or Not FrmAccounts.txtusername.Text = " " Or Not FrmAccounts.txtpassword.Text = " " Then
             If FrmAccounts.txtpassword.Text = FrmAccounts.txtconfirmpassword.Text Then
                 If mode = "new" Then
                     con.Open()
-                    Dim cmd As New SqlClient.SqlCommand("insert into TblUsers (LastName,FirstName,MiddleName,Username,Password,Email,ContactNumber)values ('" & FrmAccounts.txtsname.Text & "','" & FrmAccounts.txtgname.Text & "','" & FrmAccounts.txtmname.Text & "','" & FrmAccounts.txtusername.Text & "','" & FrmAccounts.txtpassword.Text & "','" & FrmAccounts.txtemail.Text & "','" & FrmAccounts.txtphonenumber.Text & "')", con)
+                    Dim cmd As New SqlClient.SqlCommand("insert into TblUsers (LastName,FirstName,MiddleName,Username,Password,Email,ContactNumber,UserType)values ('" & FrmAccounts.txtsname.Text & "','" & FrmAccounts.txtgname.Text & "','" & FrmAccounts.txtmname.Text & "','" & FrmAccounts.txtusername.Text & "','" & FrmAccounts.txtpassword.Text & "','" & FrmAccounts.txtemail.Text & "','" & FrmAccounts.txtphonenumber.Text & "','" & FrmAccounts.cmbusertypes.Text & "')", con)
                     Dim rowsaffected As Integer = cmd.ExecuteNonQuery()
                     If rowsaffected > 0 Then
                         MsgBox("Successfully added an Account!")
@@ -102,7 +105,7 @@
 
                 ElseIf mode = "edit" Then
                     con.Open()
-                    Dim cmd As New SqlClient.SqlCommand("Update TBlUsers set LastName='" & FrmAccounts.txtsname.Text & "',Firstname='" & FrmAccounts.txtgname.Text & "',MiddleName='" & FrmAccounts.txtmname.Text & "',Password='" & FrmAccounts.txtpassword.Text & "',Email ='" & FrmAccounts.txtemail.Text & "',ContactNumber='" & FrmAccounts.txtphonenumber.Text & "'where Username ='" & FrmAccounts.txtusername.Text & "'", con)
+                    Dim cmd As New SqlClient.SqlCommand("Update TBlUsers set LastName='" & FrmAccounts.txtsname.Text & "',Firstname='" & FrmAccounts.txtgname.Text & "',MiddleName='" & FrmAccounts.txtmname.Text & "',Password='" & FrmAccounts.txtpassword.Text & "',Email ='" & FrmAccounts.txtemail.Text & "',ContactNumber='" & FrmAccounts.txtphonenumber.Text & "',UserType='" & FrmAccounts.cmbusertypes.Text & "'where Username ='" & FrmAccounts.txtusername.Text & "'", con)
                     cmd.ExecuteNonQuery()
                     con.Close()
                     accountdefault()
@@ -141,7 +144,7 @@
             End While
             con.Close()
         Else
-            Dim cmd As New SqlClient.SqlCommand("select * from TblUsers where  LastName LIKE'" & FrmAccounts.txtaccountfilter.Text & "%" & "' or FirstName LIKE'" & FrmAccounts.txtaccountfilter.Text & "%" & "' or MiddleName LIKE'" & FrmAccounts.txtaccountfilter.Text & "%" & "' or Username LIKE'" & FrmAccounts.txtaccountfilter.Text & "%" & "'", con)
+            Dim cmd As New SqlClient.SqlCommand("select * from TblUsers where  LastName LIKE'" & FrmAccounts.txtaccountfilter.Text & "%" & "' or FirstName LIKE'" & FrmAccounts.txtaccountfilter.Text & "%" & "' or MiddleName LIKE'" & FrmAccounts.txtaccountfilter.Text & "%" & "' or Username LIKE'" & FrmAccounts.txtaccountfilter.Text & "%" & "' or UsetType LIKE'" & FrmAccounts.txtaccountfilter.Text & "%" & "'", con)
             con.Open()
             dr = cmd.ExecuteReader
             Dim x As Integer = 0

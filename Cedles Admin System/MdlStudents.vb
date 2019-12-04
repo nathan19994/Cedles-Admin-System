@@ -15,7 +15,6 @@
             FrmStudents.Studentsdisplay.Items(x).SubItems.Add(dr.GetValue(5).ToString())
             FrmStudents.Studentsdisplay.Items(x).SubItems.Add(dr.GetValue(6).ToString())
             FrmStudents.Studentsdisplay.Items(x).SubItems.Add(dr.GetValue(7).ToString())
-            FrmStudents.Studentsdisplay.Items(x).SubItems.Add(dr.GetValue(8).ToString())
             x = x + 1
         End While
         con.Close()
@@ -26,8 +25,6 @@
         a = FrmStudents.Studentsdisplay.FocusedItem().Index
 
         FrmStudents.txtstudentnumber.Text = FrmStudents.Studentsdisplay.Items(a).Text
-        FrmStudents.txtyearlevel.Text = FrmStudents.Studentsdisplay.Items(a).SubItems.Item(1).Text
-        FrmStudents.txtsection.Text = FrmStudents.Studentsdisplay.Items(a).SubItems.Item(2).Text
         FrmStudents.txtgname.Text = FrmStudents.Studentsdisplay.Items(a).SubItems.Item(3).Text
         FrmStudents.txtmname.Text = FrmStudents.Studentsdisplay.Items(a).SubItems.Item(4).Text
         FrmStudents.txtsname.Text = FrmStudents.Studentsdisplay.Items(a).SubItems.Item(5).Text
@@ -39,8 +36,7 @@
     Public Sub studentinfoclear()
         FrmStudents.txtstudentfilter.Clear()
         FrmStudents.txtstudentnumber.Clear()
-        FrmStudents.txtyearlevel.Clear()
-        FrmStudents.txtsection.Clear()
+        FrmStudents.cmbsections.Items.Clear()
         FrmStudents.txtgname.Clear()
         FrmStudents.txtmname.Clear()
         FrmStudents.txtsname.Clear()
@@ -51,8 +47,6 @@
     Public Sub studentdefault()
         FrmStudents.txtstudentfilter.Enabled = True
         FrmStudents.txtstudentnumber.Enabled = False
-        FrmStudents.txtyearlevel.Enabled = False
-        FrmStudents.txtsection.Enabled = False
         FrmStudents.txtgname.Enabled = False
         FrmStudents.txtmname.Enabled = False
         FrmStudents.txtsname.Enabled = False
@@ -77,8 +71,7 @@
     Public Sub studentinfoenabled()
         FrmStudents.txtstudentfilter.Enabled = False
         FrmStudents.txtstudentnumber.Enabled = True
-        FrmStudents.txtyearlevel.Enabled = True
-        FrmStudents.txtsection.Enabled = True
+        FrmStudents.cmbsections.Enabled = True
         FrmStudents.txtgname.Enabled = True
         FrmStudents.txtmname.Enabled = True
         FrmStudents.txtsname.Enabled = True
@@ -100,10 +93,10 @@
         con.Close()
     End Sub
     Public Sub StudentSave()
-        If Not FrmStudents.txtstudentnumber.Text = " " Or Not FrmStudents.txtyearlevel.Text = " " Or Not FrmStudents.txtsection.Text = " " Or Not FrmStudents.txtgname.Text = " " Or Not FrmStudents.txtmname.Text = " " Or Not FrmStudents.txtsname.Text = " " Or Not FrmStudents.txtaddress.Text = " " Or Not FrmStudents.txtguardianname.Text = " " Or Not FrmStudents.txtguardiancontactnumber.Text = " " Then
+        If Not FrmStudents.txtstudentnumber.Text = " " Or Not FrmStudents.txtgname.Text = " " Or Not FrmStudents.txtmname.Text = " " Or Not FrmStudents.txtsname.Text = " " Or Not FrmStudents.txtaddress.Text = " " Or Not FrmStudents.txtguardianname.Text = " " Or Not FrmStudents.txtguardiancontactnumber.Text = " " Then
             If mode = "new" Then
                 con.Open()
-                Dim cmd As New SqlClient.SqlCommand("insert into TblStudents (StudentNumber,YearLevel,Section,GivenName,MiddleName,LastName,Address,GuardianName,GuardianContactNumber)values ('" & FrmStudents.txtstudentnumber.Text & "','" & FrmStudents.txtyearlevel.Text & "','" & FrmStudents.txtsection.Text & "','" & FrmStudents.txtgname.Text & "','" & FrmStudents.txtmname.Text & "','" & FrmStudents.txtsname.Text & "','" & FrmStudents.txtaddress.Text & "','" & FrmStudents.txtguardianname.Text & "','" & FrmStudents.txtguardiancontactnumber.Text & "')", con)
+                Dim cmd As New SqlClient.SqlCommand("insert into TblStudents (StudentNumber,SectionName,GivenName,MiddleName,LastName,Address,GuardianName,GuardianContactNumber)values ('" & FrmStudents.txtstudentnumber.Text & "','" & FrmStudents.cmbsections.Text & "','" & FrmStudents.txtgname.Text & "','" & FrmStudents.txtmname.Text & "','" & FrmStudents.txtsname.Text & "','" & FrmStudents.txtaddress.Text & "','" & FrmStudents.txtguardianname.Text & "','" & FrmStudents.txtguardiancontactnumber.Text & "')", con)
                 Dim rowsaffected As Integer = cmd.ExecuteNonQuery()
                 If rowsaffected > 0 Then
                     MsgBox("Successfully added an Account!")
@@ -118,7 +111,7 @@
 
             ElseIf mode = "edit" Then
                 con.Open()
-                Dim cmd As New SqlClient.SqlCommand("Update TblStudents set LastName='" & FrmStudents.txtsname.Text & "',GivenName='" & FrmStudents.txtgname.Text & "',MiddleName='" & FrmStudents.txtmname.Text & "',YearLevel='" & FrmStudents.txtyearlevel.Text & "',Section ='" & FrmStudents.txtsection.Text & "',Address='" & FrmStudents.txtaddress.Text & "',GuardianName='" & FrmStudents.txtguardianname.Text & "',GuardianContactNumber='" & FrmStudents.txtguardiancontactnumber.Text & "'where StudentNumber ='" & FrmStudents.txtstudentnumber.Text & "'", con)
+                Dim cmd As New SqlClient.SqlCommand("Update TblStudents set LastName='" & FrmStudents.txtsname.Text & "',GivenName='" & FrmStudents.txtgname.Text & "',MiddleName='" & FrmStudents.txtmname.Text & "',Section ='" & FrmStudents.cmbsections.Text & "',Address='" & FrmStudents.txtaddress.Text & "',GuardianName='" & FrmStudents.txtguardianname.Text & "',GuardianContactNumber='" & FrmStudents.txtguardiancontactnumber.Text & "'where StudentNumber ='" & FrmStudents.txtstudentnumber.Text & "'", con)
                 cmd.ExecuteNonQuery()
                 con.Close()
                 studentdefault()

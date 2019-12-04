@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub BtnTeachers_Click(sender As Object, e As EventArgs) Handles BtnTeachers.Click
-        FrmTeachers.Show()
+        FrmSubjectAssignment.Show()
         Me.Dispose()
     End Sub
 

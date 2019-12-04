@@ -86,6 +86,12 @@
       <DependentUpon>FrmHome.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmSectionAssignment.Designer.vb">
+      <DependentUpon>FrmSectionAssignment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSectionAssignment.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmSections.Designer.vb">
       <DependentUpon>FrmSections.vb</DependentUpon>
     </Compile>
@@ -98,15 +104,16 @@
     <Compile Include="FrmStudents.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTeachers.Designer.vb">
-      <DependentUpon>FrmTeachers.vb</DependentUpon>
+    <Compile Include="FrmSubjectAssignment.Designer.vb">
+      <DependentUpon>FrmSubjectAssignment.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmTeachers.vb">
+    <Compile Include="FrmSubjectAssignment.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mdlaccounts.vb" />
     <Compile Include="MdlDBConnection.vb" />
     <Compile Include="MdlStudents.vb" />
+    <Compile Include="MdlSubjectAssignments.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -130,14 +137,17 @@
     <EmbeddedResource Include="FrmHome.resx">
       <DependentUpon>FrmHome.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSectionAssignment.resx">
+      <DependentUpon>FrmSectionAssignment.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSections.resx">
       <DependentUpon>FrmSections.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStudents.resx">
       <DependentUpon>FrmStudents.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTeachers.resx">
-      <DependentUpon>FrmTeachers.vb</DependentUpon>
+    <EmbeddedResource Include="FrmSubjectAssignment.resx">
+      <DependentUpon>FrmSubjectAssignment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
