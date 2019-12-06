@@ -22,6 +22,7 @@ Partial Class FrmSectionAssignment
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.BtnSections = New System.Windows.Forms.Button()
         Me.lblTime = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -39,6 +40,7 @@ Partial Class FrmSectionAssignment
         Me.txtstudentfilter = New System.Windows.Forms.MaskedTextBox()
         Me.AccountFilter = New System.Windows.Forms.Button()
         Me.Label44 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -272,6 +274,10 @@ Partial Class FrmSectionAssignment
         Me.Label44.TabIndex = 484
         Me.Label44.Text = "Search"
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
         'FrmSectionAssignment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -322,4 +328,5 @@ Partial Class FrmSectionAssignment
     Friend WithEvents txtstudentfilter As MaskedTextBox
     Friend WithEvents AccountFilter As Button
     Friend WithEvents Label44 As Label
+    Friend WithEvents Timer1 As Timer
 End Class

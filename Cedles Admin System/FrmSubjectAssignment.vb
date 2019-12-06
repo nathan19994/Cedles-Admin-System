@@ -38,4 +38,9 @@
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         End
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lblDate.Text = Date.Now.ToString("MMM dd, yyyy")
+        lblTime.Text = TimeOfDay
+    End Sub
 End Class

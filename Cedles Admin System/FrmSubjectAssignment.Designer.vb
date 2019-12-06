@@ -22,6 +22,7 @@ Partial Class FrmSubjectAssignment
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.txtstudentfilter = New System.Windows.Forms.MaskedTextBox()
         Me.AccountFilter = New System.Windows.Forms.Button()
         Me.Label44 = New System.Windows.Forms.Label()
@@ -61,6 +62,7 @@ Partial Class FrmSubjectAssignment
         Me.ColumnHeader14 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.BtnSections = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btncancel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btndeleteaccount, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -518,6 +520,10 @@ Partial Class FrmSubjectAssignment
         Me.BtnSections.Text = "SECTIONS"
         Me.BtnSections.UseVisualStyleBackColor = False
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
         'FrmSubjectAssignment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -608,4 +614,5 @@ Partial Class FrmSubjectAssignment
     Friend WithEvents ColumnHeader14 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents BtnSections As Button
+    Friend WithEvents Timer1 As Timer
 End Class
