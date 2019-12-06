@@ -22,15 +22,15 @@ Partial Class FrmSections
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnSubjectAssignment = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BtnTeachers = New System.Windows.Forms.Button()
+        Me.BtnSectionAssignment = New System.Windows.Forms.Button()
         Me.BtnStudents = New System.Windows.Forms.Button()
         Me.btnHome = New System.Windows.Forms.Button()
         Me.btnOut = New System.Windows.Forms.Button()
         Me.BtnAccounts = New System.Windows.Forms.Button()
         Me.Header1 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.BtnClose = New System.Windows.Forms.Button()
         Me.btncancel = New System.Windows.Forms.PictureBox()
         Me.btndeleteaccount = New System.Windows.Forms.PictureBox()
         Me.btnsaveaccount = New System.Windows.Forms.PictureBox()
@@ -59,20 +59,20 @@ Partial Class FrmSections
         CType(Me.btnaddaccount, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'BtnSubjectAssignment
         '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Gray
-        Me.Button1.Location = New System.Drawing.Point(676, 26)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(170, 56)
-        Me.Button1.TabIndex = 446
-        Me.Button1.Text = "SUBJECT ASSIGNMENT"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnSubjectAssignment.BackColor = System.Drawing.Color.White
+        Me.BtnSubjectAssignment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnSubjectAssignment.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.BtnSubjectAssignment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSubjectAssignment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSubjectAssignment.ForeColor = System.Drawing.Color.Gray
+        Me.BtnSubjectAssignment.Location = New System.Drawing.Point(676, 26)
+        Me.BtnSubjectAssignment.Name = "BtnSubjectAssignment"
+        Me.BtnSubjectAssignment.Size = New System.Drawing.Size(170, 56)
+        Me.BtnSubjectAssignment.TabIndex = 446
+        Me.BtnSubjectAssignment.Text = "SUBJECT ASSIGNMENT"
+        Me.BtnSubjectAssignment.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -83,20 +83,20 @@ Partial Class FrmSections
         Me.PictureBox1.TabIndex = 445
         Me.PictureBox1.TabStop = False
         '
-        'BtnTeachers
+        'BtnSectionAssignment
         '
-        Me.BtnTeachers.BackColor = System.Drawing.Color.White
-        Me.BtnTeachers.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnTeachers.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
-        Me.BtnTeachers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnTeachers.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnTeachers.ForeColor = System.Drawing.Color.Gray
-        Me.BtnTeachers.Location = New System.Drawing.Point(507, 26)
-        Me.BtnTeachers.Name = "BtnTeachers"
-        Me.BtnTeachers.Size = New System.Drawing.Size(170, 56)
-        Me.BtnTeachers.TabIndex = 444
-        Me.BtnTeachers.Text = "SECTION ASSIGNMENT"
-        Me.BtnTeachers.UseVisualStyleBackColor = False
+        Me.BtnSectionAssignment.BackColor = System.Drawing.Color.White
+        Me.BtnSectionAssignment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnSectionAssignment.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.BtnSectionAssignment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSectionAssignment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSectionAssignment.ForeColor = System.Drawing.Color.Gray
+        Me.BtnSectionAssignment.Location = New System.Drawing.Point(507, 26)
+        Me.BtnSectionAssignment.Name = "BtnSectionAssignment"
+        Me.BtnSectionAssignment.Size = New System.Drawing.Size(170, 56)
+        Me.BtnSectionAssignment.TabIndex = 444
+        Me.BtnSectionAssignment.Text = "SECTION ASSIGNMENT"
+        Me.BtnSectionAssignment.UseVisualStyleBackColor = False
         '
         'BtnStudents
         '
@@ -171,19 +171,19 @@ Partial Class FrmSections
         Me.Header1.Text = "CEDLES "
         Me.Header1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button3
+        'BtnClose
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(1102, 0)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(82, 29)
-        Me.Button3.TabIndex = 438
-        Me.Button3.Text = " ✖"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.BtnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.BtnClose.FlatAppearance.BorderSize = 0
+        Me.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnClose.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnClose.ForeColor = System.Drawing.Color.White
+        Me.BtnClose.Location = New System.Drawing.Point(1102, 0)
+        Me.BtnClose.Name = "BtnClose"
+        Me.BtnClose.Size = New System.Drawing.Size(82, 29)
+        Me.BtnClose.TabIndex = 438
+        Me.BtnClose.Text = " ✖"
+        Me.BtnClose.UseVisualStyleBackColor = False
         '
         'btncancel
         '
@@ -440,15 +440,15 @@ Partial Class FrmSections
         Me.Controls.Add(Me.btnsaveaccount)
         Me.Controls.Add(Me.btneditaccount)
         Me.Controls.Add(Me.btnaddaccount)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnSubjectAssignment)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.BtnTeachers)
+        Me.Controls.Add(Me.BtnSectionAssignment)
         Me.Controls.Add(Me.BtnStudents)
         Me.Controls.Add(Me.btnHome)
         Me.Controls.Add(Me.btnOut)
         Me.Controls.Add(Me.BtnAccounts)
         Me.Controls.Add(Me.Header1)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.BtnClose)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmSections"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -464,15 +464,15 @@ Partial Class FrmSections
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnSubjectAssignment As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents BtnTeachers As Button
+    Friend WithEvents BtnSectionAssignment As Button
     Friend WithEvents BtnStudents As Button
     Friend WithEvents btnHome As Button
     Friend WithEvents btnOut As Button
     Friend WithEvents BtnAccounts As Button
     Friend WithEvents Header1 As Label
-    Friend WithEvents Button3 As Button
+    Friend WithEvents BtnClose As Button
     Friend WithEvents btncancel As PictureBox
     Friend WithEvents btndeleteaccount As PictureBox
     Friend WithEvents btnsaveaccount As PictureBox

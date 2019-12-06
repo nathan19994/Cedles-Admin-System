@@ -14,3 +14,4 @@ C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedl
 C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles Admin System.xml
 C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles Admin System.pdb
 C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles_Admin_System.FrmSubjectAssignment.resources
+C:\Users\TAN\source\repos\Cedles Admin System\Cedles Admin System\obj\Debug\Cedles_Admin_System.FrmSectionAssignment.resources

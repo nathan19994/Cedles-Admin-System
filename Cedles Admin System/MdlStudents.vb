@@ -36,7 +36,6 @@
     Public Sub studentinfoclear()
         FrmStudents.txtstudentfilter.Clear()
         FrmStudents.txtstudentnumber.Clear()
-        FrmStudents.cmbsections.Items.Clear()
         FrmStudents.txtgname.Clear()
         FrmStudents.txtmname.Clear()
         FrmStudents.txtsname.Clear()
@@ -71,7 +70,6 @@
     Public Sub studentinfoenabled()
         FrmStudents.txtstudentfilter.Enabled = False
         FrmStudents.txtstudentnumber.Enabled = True
-        FrmStudents.cmbsections.Enabled = True
         FrmStudents.txtgname.Enabled = True
         FrmStudents.txtmname.Enabled = True
         FrmStudents.txtsname.Enabled = True
@@ -96,7 +94,7 @@
         If Not FrmStudents.txtstudentnumber.Text = " " Or Not FrmStudents.txtgname.Text = " " Or Not FrmStudents.txtmname.Text = " " Or Not FrmStudents.txtsname.Text = " " Or Not FrmStudents.txtaddress.Text = " " Or Not FrmStudents.txtguardianname.Text = " " Or Not FrmStudents.txtguardiancontactnumber.Text = " " Then
             If mode = "new" Then
                 con.Open()
-                Dim cmd As New SqlClient.SqlCommand("insert into TblStudents (StudentNumber,SectionName,GivenName,MiddleName,LastName,Address,GuardianName,GuardianContactNumber)values ('" & FrmStudents.txtstudentnumber.Text & "','" & FrmStudents.cmbsections.Text & "','" & FrmStudents.txtgname.Text & "','" & FrmStudents.txtmname.Text & "','" & FrmStudents.txtsname.Text & "','" & FrmStudents.txtaddress.Text & "','" & FrmStudents.txtguardianname.Text & "','" & FrmStudents.txtguardiancontactnumber.Text & "')", con)
+                Dim cmd As New SqlClient.SqlCommand("insert into TblStudents (StudentNumber,GivenName,MiddleName,LastName,Address,GuardianName,GuardianContactNumber)values ('" & FrmStudents.txtstudentnumber.Text & "','" & FrmStudents.txtgname.Text & "','" & FrmStudents.txtmname.Text & "','" & FrmStudents.txtsname.Text & "','" & FrmStudents.txtaddress.Text & "','" & FrmStudents.txtguardianname.Text & "','" & FrmStudents.txtguardiancontactnumber.Text & "')", con)
                 Dim rowsaffected As Integer = cmd.ExecuteNonQuery()
                 If rowsaffected > 0 Then
                     MsgBox("Successfully added an Account!")
@@ -111,7 +109,7 @@
 
             ElseIf mode = "edit" Then
                 con.Open()
-                Dim cmd As New SqlClient.SqlCommand("Update TblStudents set LastName='" & FrmStudents.txtsname.Text & "',GivenName='" & FrmStudents.txtgname.Text & "',MiddleName='" & FrmStudents.txtmname.Text & "',Section ='" & FrmStudents.cmbsections.Text & "',Address='" & FrmStudents.txtaddress.Text & "',GuardianName='" & FrmStudents.txtguardianname.Text & "',GuardianContactNumber='" & FrmStudents.txtguardiancontactnumber.Text & "'where StudentNumber ='" & FrmStudents.txtstudentnumber.Text & "'", con)
+                Dim cmd As New SqlClient.SqlCommand("Update TblStudents set LastName='" & FrmStudents.txtsname.Text & "',GivenName='" & FrmStudents.txtgname.Text & "',MiddleName='" & FrmStudents.txtmname.Text & "',Address='" & FrmStudents.txtaddress.Text & "',GuardianName='" & FrmStudents.txtguardianname.Text & "',GuardianContactNumber='" & FrmStudents.txtguardiancontactnumber.Text & "'where StudentNumber ='" & FrmStudents.txtstudentnumber.Text & "'", con)
                 cmd.ExecuteNonQuery()
                 con.Close()
                 studentdefault()

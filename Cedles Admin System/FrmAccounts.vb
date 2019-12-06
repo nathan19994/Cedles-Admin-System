@@ -70,8 +70,17 @@
         initializeaccountbuttons()
         accountinfoclear()
     End Sub
+    Private Sub BtnSections_Click(sender As Object, e As EventArgs) Handles BtnSections.Click
+        FrmSections.Show()
+        Me.Dispose()
+    End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub BtnSubjectAssignment_Click(sender As Object, e As EventArgs) Handles BtnSubjectAssignment.Click
+        FrmSubjectAssignment.Show()
+        Me.Dispose()
+    End Sub
+
+    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         End
     End Sub
 End Class
