@@ -5,7 +5,7 @@
         con.Open()
         dr = cmd.ExecuteReader
         While dr.Read
-            FrmSubjectAssignment.cmbsections.Items.Add(dr.GetValue(0).ToString())
+            FrmSubjectAssignment.cmbsections.Items.Add(dr.GetValue(1).ToString())
         End While
         con.Close()
     End Sub

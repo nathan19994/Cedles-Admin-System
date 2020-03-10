@@ -174,6 +174,7 @@ Partial Class FrmSubjectAssignment
         Me.cmbsubjects.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbsubjects.ForeColor = System.Drawing.Color.Black
         Me.cmbsubjects.FormattingEnabled = True
+        Me.cmbsubjects.Items.AddRange(New Object() {"Mother Tongue", "Filipino", "English", "Math", "Science", "Araling Panlipunan", "ESP", "Mapeh", "Music", "Arts", "P.E", "Health"})
         Me.cmbsubjects.Location = New System.Drawing.Point(247, 203)
         Me.cmbsubjects.Name = "cmbsubjects"
         Me.cmbsubjects.Size = New System.Drawing.Size(161, 28)
@@ -429,6 +430,7 @@ Partial Class FrmSubjectAssignment
         Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.ForeColor = System.Drawing.Color.Black
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"})
         Me.ComboBox1.Location = New System.Drawing.Point(249, 136)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(161, 28)
@@ -455,7 +457,7 @@ Partial Class FrmSubjectAssignment
         Me.accountdisplay.GridLines = True
         Me.accountdisplay.HideSelection = False
         Me.accountdisplay.LabelEdit = True
-        Me.accountdisplay.Location = New System.Drawing.Point(169, 307)
+        Me.accountdisplay.Location = New System.Drawing.Point(169, 301)
         Me.accountdisplay.Name = "accountdisplay"
         Me.accountdisplay.Size = New System.Drawing.Size(846, 344)
         Me.accountdisplay.TabIndex = 463

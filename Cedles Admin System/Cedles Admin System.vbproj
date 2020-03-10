@@ -112,6 +112,8 @@
     </Compile>
     <Compile Include="mdlaccounts.vb" />
     <Compile Include="MdlDBConnection.vb" />
+    <Compile Include="MdlSections.vb" />
+    <Compile Include="MdlSqlQueries.vb" />
     <Compile Include="MdlStudents.vb" />
     <Compile Include="MdlSubjectAssignments.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

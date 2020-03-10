@@ -36,4 +36,6 @@
         lblDate.Text = Date.Now.ToString("MMM dd, yyyy")
         lblTime.Text = TimeOfDay
     End Sub
+
+
 End Class

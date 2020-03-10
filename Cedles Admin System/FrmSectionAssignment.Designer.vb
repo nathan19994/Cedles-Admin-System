@@ -41,7 +41,30 @@ Partial Class FrmSectionAssignment
         Me.AccountFilter = New System.Windows.Forms.Button()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.accountdisplay = New System.Windows.Forms.ListView()
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btncancel = New System.Windows.Forms.PictureBox()
+        Me.btndeletestudent = New System.Windows.Forms.PictureBox()
+        Me.btnsavestudent = New System.Windows.Forms.PictureBox()
+        Me.btneditstudent = New System.Windows.Forms.PictureBox()
+        Me.btnaddstudent = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtstudentnumber = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtgname = New System.Windows.Forms.TextBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.cmbsections = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btncancel, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btndeletestudent, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnsavestudent, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btneditstudent, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnaddstudent, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnSections
@@ -278,12 +301,204 @@ Partial Class FrmSectionAssignment
         '
         Me.Timer1.Enabled = True
         '
+        'accountdisplay
+        '
+        Me.accountdisplay.BackColor = System.Drawing.Color.Gray
+        Me.accountdisplay.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader1})
+        Me.accountdisplay.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.accountdisplay.ForeColor = System.Drawing.Color.Black
+        Me.accountdisplay.FullRowSelect = True
+        Me.accountdisplay.GridLines = True
+        Me.accountdisplay.HideSelection = False
+        Me.accountdisplay.LabelEdit = True
+        Me.accountdisplay.Location = New System.Drawing.Point(169, 257)
+        Me.accountdisplay.Name = "accountdisplay"
+        Me.accountdisplay.Size = New System.Drawing.Size(803, 396)
+        Me.accountdisplay.TabIndex = 486
+        Me.accountdisplay.UseCompatibleStateImageBehavior = False
+        Me.accountdisplay.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Year Level"
+        Me.ColumnHeader5.Width = 100
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Section Name"
+        Me.ColumnHeader6.Width = 200
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "Student Number"
+        Me.ColumnHeader7.Width = 150
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "Student Name"
+        Me.ColumnHeader1.Width = 350
+        '
+        'btncancel
+        '
+        Me.btncancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btncancel.Location = New System.Drawing.Point(2, 361)
+        Me.btncancel.Name = "btncancel"
+        Me.btncancel.Size = New System.Drawing.Size(168, 53)
+        Me.btncancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btncancel.TabIndex = 491
+        Me.btncancel.TabStop = False
+        '
+        'btndeletestudent
+        '
+        Me.btndeletestudent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btndeletestudent.Location = New System.Drawing.Point(2, 309)
+        Me.btndeletestudent.Name = "btndeletestudent"
+        Me.btndeletestudent.Size = New System.Drawing.Size(168, 53)
+        Me.btndeletestudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btndeletestudent.TabIndex = 490
+        Me.btndeletestudent.TabStop = False
+        '
+        'btnsavestudent
+        '
+        Me.btnsavestudent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnsavestudent.Location = New System.Drawing.Point(2, 257)
+        Me.btnsavestudent.Name = "btnsavestudent"
+        Me.btnsavestudent.Size = New System.Drawing.Size(168, 53)
+        Me.btnsavestudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnsavestudent.TabIndex = 489
+        Me.btnsavestudent.TabStop = False
+        '
+        'btneditstudent
+        '
+        Me.btneditstudent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btneditstudent.Location = New System.Drawing.Point(2, 205)
+        Me.btneditstudent.Name = "btneditstudent"
+        Me.btneditstudent.Size = New System.Drawing.Size(168, 53)
+        Me.btneditstudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btneditstudent.TabIndex = 488
+        Me.btneditstudent.TabStop = False
+        '
+        'btnaddstudent
+        '
+        Me.btnaddstudent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnaddstudent.Location = New System.Drawing.Point(2, 153)
+        Me.btnaddstudent.Name = "btnaddstudent"
+        Me.btnaddstudent.Size = New System.Drawing.Size(168, 53)
+        Me.btnaddstudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnaddstudent.TabIndex = 487
+        Me.btnaddstudent.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Corbel", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(381, 100)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(127, 23)
+        Me.Label6.TabIndex = 494
+        Me.Label6.Text = "Section Name"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"Admin", "Teacher"})
+        Me.ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox1.BackColor = System.Drawing.Color.White
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.ForeColor = System.Drawing.Color.Black
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6"})
+        Me.ComboBox1.Location = New System.Drawing.Point(198, 123)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(161, 28)
+        Me.ComboBox1.TabIndex = 493
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Corbel", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(192, 100)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(96, 23)
+        Me.Label5.TabIndex = 492
+        Me.Label5.Text = "Year Level"
+        '
+        'txtstudentnumber
+        '
+        Me.txtstudentnumber.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtstudentnumber.Location = New System.Drawing.Point(198, 192)
+        Me.txtstudentnumber.Name = "txtstudentnumber"
+        Me.txtstudentnumber.Size = New System.Drawing.Size(175, 29)
+        Me.txtstudentnumber.TabIndex = 496
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Corbel", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(194, 166)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(149, 23)
+        Me.Label4.TabIndex = 497
+        Me.Label4.Text = "Student Number"
+        '
+        'txtgname
+        '
+        Me.txtgname.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtgname.Location = New System.Drawing.Point(385, 189)
+        Me.txtgname.Name = "txtgname"
+        Me.txtgname.Size = New System.Drawing.Size(461, 29)
+        Me.txtgname.TabIndex = 498
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Corbel", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.ForeColor = System.Drawing.Color.Black
+        Me.Label39.Location = New System.Drawing.Point(381, 166)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(131, 23)
+        Me.Label39.TabIndex = 499
+        Me.Label39.Text = "Student Name"
+        '
+        'cmbsections
+        '
+        Me.cmbsections.AutoCompleteCustomSource.AddRange(New String() {"Admin", "Teacher"})
+        Me.cmbsections.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cmbsections.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbsections.BackColor = System.Drawing.Color.White
+        Me.cmbsections.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbsections.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbsections.ForeColor = System.Drawing.Color.Black
+        Me.cmbsections.FormattingEnabled = True
+        Me.cmbsections.Location = New System.Drawing.Point(385, 126)
+        Me.cmbsections.Name = "cmbsections"
+        Me.cmbsections.Size = New System.Drawing.Size(256, 28)
+        Me.cmbsections.TabIndex = 500
+        '
         'FrmSectionAssignment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1184, 650)
+        Me.Controls.Add(Me.cmbsections)
+        Me.Controls.Add(Me.txtgname)
+        Me.Controls.Add(Me.Label39)
+        Me.Controls.Add(Me.txtstudentnumber)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.btncancel)
+        Me.Controls.Add(Me.btndeletestudent)
+        Me.Controls.Add(Me.btnsavestudent)
+        Me.Controls.Add(Me.btneditstudent)
+        Me.Controls.Add(Me.btnaddstudent)
+        Me.Controls.Add(Me.accountdisplay)
         Me.Controls.Add(Me.txtstudentfilter)
         Me.Controls.Add(Me.AccountFilter)
         Me.Controls.Add(Me.Label44)
@@ -306,6 +521,11 @@ Partial Class FrmSectionAssignment
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmSectionAssignment"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btncancel, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btndeletestudent, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnsavestudent, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btneditstudent, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnaddstudent, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -329,4 +549,22 @@ Partial Class FrmSectionAssignment
     Friend WithEvents AccountFilter As Button
     Friend WithEvents Label44 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents accountdisplay As ListView
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents btncancel As PictureBox
+    Friend WithEvents btndeletestudent As PictureBox
+    Friend WithEvents btnsavestudent As PictureBox
+    Friend WithEvents btneditstudent As PictureBox
+    Friend WithEvents btnaddstudent As PictureBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents txtstudentnumber As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtgname As TextBox
+    Friend WithEvents Label39 As Label
+    Friend WithEvents cmbsections As ComboBox
 End Class

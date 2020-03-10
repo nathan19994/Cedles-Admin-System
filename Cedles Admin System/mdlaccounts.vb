@@ -1,29 +1,9 @@
 ﻿Module mdlaccounts
     Public mode As String
-    Public Sub CreateAccountViewing()
-        FrmAccounts.accountdisplay.Items.Clear()
-        Dim dr As SqlClient.SqlDataReader
-        Dim cmd As New SqlClient.SqlCommand("select * from TblUsers order by Username ", con)
-        con.Open()
-        dr = cmd.ExecuteReader
-        Dim x As Integer = 0
-        While dr.Read
-            FrmAccounts.accountdisplay.Items.Add(dr.GetValue(0).ToString())
-            FrmAccounts.accountdisplay.Items(x).SubItems.Add(dr.GetValue(1).ToString())
-            FrmAccounts.accountdisplay.Items(x).SubItems.Add(dr.GetValue(2).ToString())
-            FrmAccounts.accountdisplay.Items(x).SubItems.Add(dr.GetValue(3).ToString())
-            FrmAccounts.accountdisplay.Items(x).SubItems.Add(dr.GetValue(4).ToString())
-            FrmAccounts.accountdisplay.Items(x).SubItems.Add(dr.GetValue(5).ToString())
-            FrmAccounts.accountdisplay.Items(x).SubItems.Add(dr.GetValue(6).ToString())
-            FrmAccounts.accountdisplay.Items(x).SubItems.Add(dr.GetValue(7).ToString())
-            x = x + 1
-        End While
-        con.Close()
-    End Sub
-
+    Public usertypes() As String = {"Admin", "Teachers"}
     Public Sub selectaccount()
         Dim a As Integer = 0
-
+        Dim Index As Integer
         a = FrmAccounts.accountdisplay.FocusedItem().Index
 
         FrmAccounts.txtusername.Text = FrmAccounts.accountdisplay.Items(a).Text
@@ -34,7 +14,12 @@
         FrmAccounts.txtgname.Text = FrmAccounts.accountdisplay.Items(a).SubItems.Item(4).Text
         FrmAccounts.txtmname.Text = FrmAccounts.accountdisplay.Items(a).SubItems.Item(5).Text
         FrmAccounts.txtsname.Text = FrmAccounts.accountdisplay.Items(a).SubItems.Item(6).Text
-        FrmAccounts.cmbusertypes.Text = FrmAccounts.accountdisplay.Items(a).SubItems.Item(7).Text
+        For i As Integer = 0 To (usertypes.Length - 1)
+            If (usertypes(i).Equals(Trim(FrmAccounts.accountdisplay.Items(a).SubItems.Item(7).Text))) Then
+                Index = i
+            End If
+        Next
+        FrmAccounts.cmbusertypes.SelectedIndex = Index
     End Sub
     Public Sub accountinfoclear()
         FrmAccounts.txtaccountfilter.Clear()
@@ -97,7 +82,10 @@
                         con.Close()
                         accountdefault()
                         accountinfoclear()
-                        CreateAccountViewing()
+                        TableName = "TblUsers"
+                        orderby = "Username"
+                        display = "accountdisplay"
+                        LoadData(TableName, orderby, FrmAccounts, display)
                         initializeaccountbuttons()
                     Else
                         MsgBox("Cannot Add Account Properly")
@@ -110,7 +98,7 @@
                     con.Close()
                     accountdefault()
                     accountinfoclear()
-                    CreateAccountViewing()
+                    LoadData(TableName, orderby, FrmAccounts, display)
                     initializeaccountbuttons()
 
                 End If

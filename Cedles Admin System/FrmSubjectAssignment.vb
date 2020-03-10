@@ -1,7 +1,6 @@
 ﻿Public Class FrmSubjectAssignment
     Private Sub FrmSubjectAssignment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadSections()
-        LoadSubjects()
         LoadTeachers()
     End Sub
 
@@ -43,4 +42,6 @@
         lblDate.Text = Date.Now.ToString("MMM dd, yyyy")
         lblTime.Text = TimeOfDay
     End Sub
+
+
 End Class

@@ -91,7 +91,7 @@ Partial Class FrmAccounts
         Me.Header1.Name = "Header1"
         Me.Header1.Size = New System.Drawing.Size(1102, 29)
         Me.Header1.TabIndex = 395
-        Me.Header1.Text = "CEDLES "
+        Me.Header1.Text = "Colonel E De Leon Elementary School"
         Me.Header1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BtnClose
@@ -515,7 +515,7 @@ Partial Class FrmAccounts
         Me.btnaddaccount.Image = Global.Cedles_Admin_System.My.Resources.Resources.addaccount
         Me.btnaddaccount.Location = New System.Drawing.Point(0, 145)
         Me.btnaddaccount.Name = "btnaddaccount"
-        Me.btnaddaccount.Size = New System.Drawing.Size(170, 55)
+        Me.btnaddaccount.Size = New System.Drawing.Size(170, 60)
         Me.btnaddaccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btnaddaccount.TabIndex = 410
         Me.btnaddaccount.TabStop = False

@@ -1,24 +1,5 @@
 ﻿Module MdlStudents
-    Public Sub StudentsInfoViewing()
-        FrmStudents.Studentsdisplay.Items.Clear()
-        Dim dr As SqlClient.SqlDataReader
-        Dim cmd As New SqlClient.SqlCommand("select * from TblStudents order by StudentNumber ", con)
-        con.Open()
-        dr = cmd.ExecuteReader
-        Dim x As Integer = 0
-        While dr.Read
-            FrmStudents.Studentsdisplay.Items.Add(dr.GetValue(0).ToString())
-            FrmStudents.Studentsdisplay.Items(x).SubItems.Add(dr.GetValue(1).ToString())
-            FrmStudents.Studentsdisplay.Items(x).SubItems.Add(dr.GetValue(2).ToString())
-            FrmStudents.Studentsdisplay.Items(x).SubItems.Add(dr.GetValue(3).ToString())
-            FrmStudents.Studentsdisplay.Items(x).SubItems.Add(dr.GetValue(4).ToString())
-            FrmStudents.Studentsdisplay.Items(x).SubItems.Add(dr.GetValue(5).ToString())
-            FrmStudents.Studentsdisplay.Items(x).SubItems.Add(dr.GetValue(6).ToString())
-            FrmStudents.Studentsdisplay.Items(x).SubItems.Add(dr.GetValue(7).ToString())
-            x = x + 1
-        End While
-        con.Close()
-    End Sub
+
     Public Sub selectstudent()
         Dim a As Integer = 0
 
@@ -101,7 +82,6 @@
                     con.Close()
                     studentdefault()
                     studentinfoclear()
-                    StudentsInfoViewing()
                     initializestudentbuttons()
                 Else
                     MsgBox("Cannot Add Account Properly")
@@ -114,7 +94,7 @@
                 con.Close()
                 studentdefault()
                 studentinfoclear()
-                StudentsInfoViewing()
+
                 initializestudentbuttons()
 
             End If

@@ -1,4 +1,5 @@
 ﻿Public Class FrmAccounts
+
     Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
         FrmHome.Show()
         Me.Dispose()
@@ -19,7 +20,10 @@
     End Sub
 
     Private Sub FrmAccounts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CreateAccountViewing()
+        TableName = "TblUsers"
+        orderby = "Username"
+        display = "accountdisplay"
+        LoadData(TableName, orderby, Me, display)
         accountdefault()
         initializeaccountbuttons()
         accountinfoclear()
@@ -51,7 +55,6 @@
         initializeaccountbuttons()
         accountdefault()
         accountinfoclear()
-        CreateAccountViewing()
     End Sub
 
     Private Sub AccountFilter_Click(sender As Object, e As EventArgs) Handles AccountFilter.Click
@@ -65,7 +68,7 @@
     End Sub
 
     Private Sub Btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        CreateAccountViewing()
+
         accountdefault()
         initializeaccountbuttons()
         accountinfoclear()

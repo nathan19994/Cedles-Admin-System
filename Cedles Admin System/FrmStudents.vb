@@ -1,10 +1,16 @@
 ﻿Public Class FrmStudents
+    Dim TableName As String
+    Dim orderby As String
+    Dim display As String
     Private Sub BtnSections_Click(sender As Object, e As EventArgs) Handles BtnSections.Click
         FrmSections.Show()
         Me.Dispose()
     End Sub
     Private Sub FrmStudents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        StudentsInfoViewing()
+        TableName = "TblStudents"
+        orderby = "StudentNumber"
+        display = "Studentsdisplay"
+        LoadData(TableName, orderby, Me, display)
         studentinfoclear()
         studentdefault()
         initializestudentbuttons()
@@ -18,7 +24,6 @@
     Private Sub Btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
         studentinfoclear()
         studentdefault()
-        StudentsInfoViewing()
         initializestudentbuttons()
     End Sub
 
@@ -39,7 +44,7 @@
         initializestudentbuttons()
         studentdefault()
         studentinfoclear()
-        StudentsInfoViewing()
+
     End Sub
 
     Private Sub Btnsavestudent_Click(sender As Object, e As EventArgs) Handles btnsavestudent.Click
